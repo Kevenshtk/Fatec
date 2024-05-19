@@ -1,0 +1,53 @@
+o principal é criar sistemas que sejam eficientes, eficazes e agradáveis para os usuários,
+levando em consideração as capacidades, limitações e preferências humanas.
+
+aspectos
+
+critérios
+
+usabilidade: envolve o design de interfaces de usuário intuitivas e acessíveis, de modo que os
+usuários possam interagir com os sistemas de forma eficiente e sem dificuldades.
+
+Interface intuitiva/acessivel
+
+Disposição de elementos na tela
+
+clareza das instruções
+
+consistência do design
+
+
+Acessibilidade: garante que os sistemas sejam utilizádos por pessoas com diferentes habilidade e 
+necessidades (visuais, auditivas, motoras ou mentais)
+
+
+Design centrado no usuário: entende as necessidades, metas e expectativas dos usuários durante
+o processo de design
+
+ferramentas(criação de personas(personalidade), testes de usabilidade)
+
+
+Feeedback e resposta: sistemas eficazes fornecem feedback claro aos usuários 
+sobre as ações que estão executando.
+
+
+Flexibilidade e eficiência(rápido e s/ esforço): permite o usuário interagir de formas 
+diferentes, dando mais liberdade na realização dos processos dentro do sistema.
+
+
+Aprendizado e memórias: permitir um aprendizado facilitado, memorização da 
+utilização dos recursos
+
+
+Estética e desin visual: é a parte visual de um sistema, desempenha um papel importante 
+para deixar mais "atraente" o sistema.
+
+Definição de itens e Pesos
+Ex.:
+SPOTFY
+Navegação(5)
+Paleta de cores(3)
+Conteúdo(5)
+OrganizaçãoDosElementos(3)
+Portabilidade(5)
+

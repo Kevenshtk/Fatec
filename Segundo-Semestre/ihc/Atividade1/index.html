@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula IHC</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+            background-color: rgb(201, 191, 191);   
+        }
+
+        h1{
+            width: 500px;
+            font-family: cursive;
+            text-align: center;
+            font-weight: bold;
+            font-size: 60px;
+            background-color: rgba(129, 69, 173, 0.323);
+            color: rgb(255, 255, 255);
+            
+            padding: 100px;
+            border: 3px solid rgb(130, 69, 173);
+        }
+
+        marquee{
+            width: 100px;
+            background-color: red;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .banner{
+            width: 100vw;
+            height: 700px;
+            background-image: url(lo-fi-11.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main{
+            margin: 30px 0;
+        }
+
+        .lista-video{
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .ao-vivo{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-top: 25px;
+        }
+
+        iframe{
+            box-shadow: 8px 5px 8px rgba(0, 0, 0, 0.355);
+            margin: 0 5px;
+            transition-duration: 0.3s;
+        }
+
+        iframe:hover{
+            width: 530px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="banner">
+        <h1>Lofi Soundtrack</h1>
+    </header>
+    
+    <main>
+        <div class="lista-video">
+            <marquee scrollamount="10" onmouseover="this.stop()" onclick="this.start()">Ao vivo</marquee>
+
+            <div class="ao-vivo">
+                <iframe width="500" height="600" src="https://www.youtube.com/embed/Z-qo1DCvCT0?si=WanYDED8gkRuS5Lv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <iframe width="500" height="600" src="https://www.youtube.com/embed/4xDzrJKXOOY?si=wgZ9MSXlIwkH-IXm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <iframe width="500" height="600" src="https://www.youtube.com/embed/jfKfPfyJRdk?si=A6L93U5ET7Hl5IfB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <iframe width="500" height="600" src="https://www.youtube.com/embed/vMxYL4Cj85Y?si=_tQDUUADcpZNNd3G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <iframe width="500" height="600" src="https://www.youtube.com/embed/rUxyKA_-grg?si=kWQPHZo-n6w-gQ5Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+</html>

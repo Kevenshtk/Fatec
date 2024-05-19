@@ -1,0 +1,70 @@
+O QUE É
+
+é o passo primordial para o desenvolvimento de um programa. Buscam montar uma base 
+de informações confiáveis e validadas para que o software seja construído.
+
+Primeiro, a equipe levanta e anota os problemas, os pedidos dos clientes, depois 
+analisa e aponta quais formas de resolução. Depois se avalia a qualidade da solução 
+encontrada, até que o problema do cliente final seja resolvido, de uma forma bem 
+simples
+
+
+OBJETIVO
+
+Organizar, avaliar e administrar para que cada passo do serviço é orientado para 
+garantir a entregar de um programa eficaz para o cliente.
+
+
+TIPO DE REQUISITOS
+
+Requisitos funcionais
+são as funções que o software deve executar.
+
+Requisitos não funcionais
+São requisitos diretamente ligados a funcionalidade do software, descrevem as funções 
+que o software deve executar.
+
+Requisitos de domínio
+São requisitos que listam as características e qualidades do software, em relação ao
+domínio. Neste sentido, o domínio é um processo conhecido pelo cliente, por um 
+departamento ou área específica em uma empresa.
+
+Requisitos subconscientes
+Geralmente não aparecem nas fases anteriores por haver um entendimento do cliente 
+e da equipe de que é essencial para o projeto. O ideal é que esses requisitos sejam 
+encarados como conscientes e listados como uma tarefa obrigatória, mesmo que pareça 
+óbvio. 
+
+Requisitos conscientes
+São requisitos listados pelo cliente e executados pela equipe. Como havia sido 
+combinado na fase de Documentação de Requisitos, o cliente espera pela entrega. 
+
+Requisitos inconscientes
+São requisitos ainda desconhecidos pelo cliente. É um plus para o cliente que não 
+esperava por aquilo, mas gostou. Com o tempo, esse requisito deve se tornar 
+consciente também.
+
+
+ETAPAS
+
+Levantamento dos Requisitos
+é a fase inicial de qualquer trabalho de Engenharia de Requisitos, momento no qual 
+todas as informações do projeto serão levantadas, listadas e debatidas
+
+Análise de Requisitos
+são analisadas para esclarecer e demonstrar como o software será desenvolvido
+
+Documentação de Requisitos
+é a fase em que tudo o que foi conversado, debatido e decidido, é oficializado em 
+um documento.
+
+Validação de Requisitos
+A verificação é a primeira análise a ser feita. Ela tem foco no desenvolvimento, ou 
+seja, na parte interna do projeto, na programação. Depois vem a validação, uma 
+forma de entender se o software cumpre com os objetivos para os quais foi desenhado.
+Aqui também são verificados possíveis erros e conflitos que possam aparecer
+
+Gestão de Requisitos
+é possível controlar as mudanças, acompanhar os requisitos e controlar a versão do 
+software, assim como o cumprimento do que foi acordado e está na Documentação de 
+Requisitos

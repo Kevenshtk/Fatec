@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+body{
+    font-family: "Outfit", sans-serif;
+    background-color: #007bff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.form-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 30px 0;
+}
+
+.lista-form{
+    width: 510px;
+    height: 650px;
+    position: relative;
+}
+
+.btn-seta{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn-seta.btn-voltar{
+    transform: rotateY(180deg);
+}
+
+.btn-seta:hover{
+    background-color: #0a0a0a1f;
+    border: 2px solid #075fbe;
+}
+
+.form{
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.095);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    padding: 12px;
+    border: 2px solid #075fbe;
+    border-radius: 10px;
+    box-shadow: rgba(8, 8, 8, 0.2) 8px 7px 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.form.selecionado{
+    opacity: 1;
+    z-index: 1;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-between;
+}
+
+#palestras{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+#cep{
+    width: 50%;
+}
+
+#logradouro, #cidade{
+    width: 60%
+}
+
+#numero , #estado{
+    width: 30%;
+}
+
+@media(max-width:580px){
+
+    .btn-seta{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .form-slider{
+        gap: 5px;
+    }
+
+    h1, h2{
+        font-size: 26px;
+    }
+}

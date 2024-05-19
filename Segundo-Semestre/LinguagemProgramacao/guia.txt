@@ -1,0 +1,74 @@
+MODELO
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<windows.h> no main(SetConsoleOutputCP(CP_UTF8);)
+#include<locale.h> no main(setlocale(LC_ALL, "Portuguese_Brazil.1252");)
+
+
+COMANDOS CMD
+
+system("comando");
+
+
+
+VARIÁVEIS
+char: guarda 1 caracter
+char[quant] faz o char guardar mais caracters
+void: sem valor
+float: real
+double: é maior que o float
+
+
+STRCPY 
+strcpy(nomeVar, "PD, o valor a ser pago e 12 crédito");
+
+
+SCANF("",)
+limitação 
+só le até o espaço (ex. joão(até aqui) pedro)
+
+fflush(stdin): limpa a memória do teclado
+
+scanf("tipoVar", &(não usa com string)nomeVar)
+
+TIPOS
+%d,%i: inteiro
+%f: float
+%c: char
+%s: string
+
+
+FORMATAR FLOAT
+%5(reserva um espaços(align)).2(quant casas decimais depos da ,)f
+
+
+PUTS
+tem o \n imbutido
+
+puts("")
+
+
+GETS
+só lê string
+
+gets(nomeVar) não tem a limitação do scanf
+getchar()
+
+
+CONVERTER
+%i para int
+%s para string
+%f para float
+%c para char
+
+
+
+ABREVIAÇÕES
+a += b
+a -= b
+a *= b
+a /= b
+a %= b
+
+

@@ -1,0 +1,112 @@
+INFORMAÇÃO
+
+DADOS são elementos que constituem a matéria-prima da informação. sozinhos não trás entendimento
+
+INFORMAÇÃO é um conjunto de dados que forma algo compriensivel
+
+CONHECIMENTO é um conjunto de informações
+
+SABEDORIA é quando utiliza-se o conhecimento para tomar uma decisão mais acertiva
+
+
+ESTRUTURA DE UMA EMPRESA
+
+estratégico 		(sabedoria)
+	|
+tático/gerencial 	(conhecimento)
+	|	 	(informação)
+	|
+operacional	 	(dados)
+
+
+
+VALOR DE UMA INFOMAÇÃO
+
+oportunidade (agrega oportunidade de negócios)
+
+competitividade (obtem vantagens)
+
+redução de incerteza (info com qualidade reduz incertezas)
+
+
+
+CLASSIFICAÇÃO DE UMA INFORMAÇÃO
+
+crítica (crucial à sobrevivencia da empresa)
+
+mínima (fundamental para uma boa gestão)
+
+potencial (determina vantagens competitivas)
+
+residual (não crucial para o funcionamento da organização)
+
+
+
+SISTEMA
+
+É um conjunto de coisas que formam um todo para atingir um objetivo.
+
+SITEMA TÉCNICO (software/app. Ex.: editor de texto) não depende de pessoas, usado para obj. diversos
+
+SISTEMA SOCIOTÉCNICO (sistema informação. Ex.: Siga) processa informação e depende de pessoas, usado para obj. específicos
+
+
+SISTEMA DE INFORMAÇÃO (Obj.: auxiliar na conquista de metaS de uma empresa)
+
+COMPOSTO
+
+pessoas
+hardware
+software
+rede
+banco de dados
+
+
+5 FORÇAS DE POTER
+
+concorrência
+barganha fornecedores
+barganha clientes
+novos entrantes mercado
+produtos substitutos
+
+VANTAGENS QUE AJUDAM A LIDAR COM A 5 FORÇAS
+
+eficiência de processos
+economia de escala
+crontrole de demanda
+restrição da oferta
+
+
+sistema de informação no auxilio das empresas
+
+liderança em custos - uso de SI para alcançar custos mais baixos operacionais 
+
+diferenciação de produto - tornar mais coveniente o uso de produtos/serviços 
+já existentes
+
+foco em nicho de mercado - atender um mercado-alvo melhor do que a concorrência
+
+intimidade cliente/fornecedor - aumentar a proximidade com os clientes, estreitar 
+os laços com os fornecedores
+
+
+
+ESTRUTURA ORGANIZACIONAL
+
+produção
+marketing / vendas
+finanças / contabilidade
+recursos humanos
+
+
+SISTEMAS PARA CADA NÍVEL DA PIRÂMIDE
+
+sistema de processamento de transações(SPT) - operacional (folha de pagamento)
+
+sistema de informação gerencial(SIG) - tático/gerencial (relatórios sobre a produção)
+
+sistema de apoi de decisão(SAD) - tático/gerencial (análise de extensas base de dados)
+
+sistema de apoio a executivos(SAE) - estratégico (simulação financeira)
+
