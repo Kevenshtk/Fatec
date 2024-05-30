@@ -9,8 +9,8 @@ const perguntasInicio = [
     {
         story: "Passando pelo distrito comercial, você se surpreende ao ouvir alguém gritando: Na função de 1º grau AX+B, B representa o valor em que a reta da função passa pelo eixo Y do gráfico, ou seja, quando X for 0. Olhando na direção da voz, você vê um goblin remanescente do exército inimigo atacando um aldeão inocente.",
         question: "Na função 7X-2, qual é o valor em que a reta passa pelo eixo Y?",
-        options: ["No valor 2.", "No valor 7.", "No valor 5.", "No valor 9."],
-        correctAnswer: "No valor 2."
+        options: ["No valor -2.", "No valor -7.", "No valor -5.", "No valor -9."],
+        correctAnswer: "No valor -2."
     },
 
     {
