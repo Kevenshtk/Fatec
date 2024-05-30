@@ -1,24 +1,21 @@
-import perguntasInicio from "./perguntas/perguntasInicio.js";
-import perguntasPonte from "./perguntas/perguntasPonte.js";
-import perguntasFloresta from "./perguntas/perguntasFloresta.js";
-import perguntasDeserto from "./perguntas/perguntasDeserto.js";
-import perguntasVale from "./perguntas/perguntasVale.js";
-import perguntasVulcao from "./perguntas/perguntasVulcao.js";
-import perguntasLabirinto from "./perguntas/perguntasLabirinto.js";
-import perguntasCastelo from "./perguntas/perguntasCastelo.js";
-import perguntasFinal from "./perguntas/perguntasFinal.js";
+import {perguntasInicio, perguntasPonte, perguntasFloresta, perguntasDeserto, perguntasVale, 
+perguntasVulcao, perguntasLabirinto, perguntasCastelo, perguntasFinal} from "./perguntas.js";
 
 document.getElementById('jogarDado').addEventListener('click', rollDado);
 
 let playerAtual = 1;
 let playerPositions = { 1: 0, 2: 0 };
 let perguntas;
+let boardAtual = 'inicio';
+
+const playerColors = {
+    1: 'blue',
+    2: 'red'
+};
 
 function rollDado() {
-    const board = document.querySelector('.board');
     let diceResult;
-
-    switch (board.id) {
+    switch (boardAtual) {
         case 'inicio':
             diceResult = Math.floor(Math.random() * 3) + 1;
             break;
@@ -28,13 +25,17 @@ function rollDado() {
         case 'floresta':
         case 'vale':
         case 'vulcao':
-        case 'labirinto':
             diceResult = Math.floor(Math.random() * 6) + 1;
+            break;
+        case 'labirinto':
+            diceResult = Math.floor(Math.random() * 2) + 1;
             break;
         case 'deserto':
             diceResult = Math.floor(Math.random() * 5) + 1;
             break;
-        default:
+        case 'final':
+        case 'fim':
+            diceResult = Math.floor(Math.random() * 1) + 1;
             break;
     }
 
@@ -47,9 +48,10 @@ function rollDado() {
 
 function movePlayer(color, passos) {
     const boards = document.querySelectorAll('.board');
-    limparCell(boards, playerPositions[playerAtual]);
+    const previousPosition = playerPositions[playerAtual];
+    limparCell(boards, previousPosition, color);
 
-    let newPosition = playerPositions[playerAtual] + passos;
+    let newPosition = previousPosition + passos;
     const lastCellIndex = 44;
     newPosition = Math.min(lastCellIndex, newPosition);
     newPosition = Math.max(0, newPosition);
@@ -61,28 +63,57 @@ function movePlayer(color, passos) {
         const cell = board.querySelector(cellId);
 
         if (cell) {
-            cell.style.backgroundColor = color;
+            if (cell.style.backgroundColor !== '') {
+                cell.style.border = `2px solid ${color}`;
+            } else {
+                cell.style.backgroundColor = color;
+                cell.style.border = '';
+            }
         }
     });
 
+    getBoardAtual(newPosition);
     exibirCard(color);
 }
 
-function limparCell(boards, position) {
+function getBoardAtual(position) {
+    if (position >= 0 && position <= 3) {
+        boardAtual = 'inicio';
+    } else if (position >= 4 && position <= 7) {
+        boardAtual = 'ponte';
+    } else if (position >= 8 && position <= 13) {
+        boardAtual = 'floresta';
+    } else if (position >= 14 && position <= 18) {
+        boardAtual = 'deserto';
+    } else if (position >= 19 && position <= 27) {
+        boardAtual = 'vale';
+    } else if (position >= 28 && position <= 33) {
+        boardAtual = 'vulcao';
+    } else if (position >= 34 && position <= 41) {
+        boardAtual = 'labirinto';
+    } else if (position >= 34 && position <= 42){
+        boardAtual = 'final';
+    } else {
+        boardAtual = 'fim';
+    }
+}
+
+function limparCell(boards, position, playerColor) {
     boards.forEach(board => {
         const cell = board.querySelector(`#cell-${position}`);
         if (cell) {
-            cell.style.backgroundColor = '';
+            if (cell.style.backgroundColor === playerColor) {
+                cell.style.backgroundColor = '';
+            }
         }
     });
 }
 
 function exibirCard(color) {
-    const board = document.querySelector('.board');
     const messageDiv = document.getElementById('gameCard');
     messageDiv.style.display = 'block';
 
-    switch (board.id) {
+    switch (boardAtual) {
         case 'inicio':
             perguntas = perguntasInicio;
             break;
@@ -107,7 +138,7 @@ function exibirCard(color) {
         case 'final':
             perguntas = perguntasCastelo;
             break;
-        default:
+        case 'fim':
             perguntas = perguntasFinal;
             break;
     }
