@@ -1,5 +1,5 @@
 .btn-manual {
-    width: 50px;
+    width: 70px;
     cursor: pointer;
     transition-duration: 0.5s;
 
@@ -9,7 +9,7 @@
 }
 
 .btn-manual:hover {
-    width: 55px;
+    width: 75px;
 }
 
 .manual {
@@ -36,13 +36,13 @@
 }
 
 .manual iframe {
-    max-width: 900px;
+    max-width: 1024px;
     box-shadow: 0 8px 18px rgb(0, 0, 0, 0.7);
     border: 3px solid white;
 }
 
 .close {
-    max-width: 32px;
+    max-width: 45px;
     filter: invert(1);
     cursor: pointer;
 

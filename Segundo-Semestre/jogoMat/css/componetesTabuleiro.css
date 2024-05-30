@@ -32,12 +32,12 @@
 }
 
 .icons .icon img {
-    width: 100px;
+    width: 120px;
     transition-duration: 0.10s;
 }
 
 .icons .icon img:hover {
-    width: 120px;
+    width: 140px;
 }
 
 .cardPergunta{
@@ -101,5 +101,5 @@
 }
 
 .card{
-    width: 380px;
+    width: 480px;
   }
