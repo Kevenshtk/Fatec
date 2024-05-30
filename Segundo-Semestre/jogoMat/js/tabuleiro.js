@@ -185,15 +185,30 @@ function checkPergunta(color) {
         const resposta = selectedOption.value;
 
         if (resposta === correctAnswer) {
-            alert('Resposta correta! Você avança um passo.');
-            movePlayer(color, 1);
-            newPosition += 1;
-            playerAtual = playerAtual === 1 ? 2 : 1;
+            if(boardAtual === 'fim'){
+                const CardVitoria = document.querySelector('.cardVitoria');
+                CardVitoria.classList.toggle('active');
+
+            } else {
+                alert('Resposta correta! Você avança um passo.');
+                movePlayer(color, 1);
+                newPosition += 1;
+                playerAtual = playerAtual === 1 ? 2 : 1;
+            }
+
         } else {
-            alert('Resposta incorreta! Você volta um passo.');
-            movePlayer(color, -1);
-            newPosition -= 1;
-            playerAtual = playerAtual === 1 ? 2 : 1;
+            if(boardAtual === 'fim'){
+                alert('Resposta incorreta! Você volta um tabuleiro.');
+                movePlayer(color, -4);
+                newPosition -= 4;
+                playerAtual = playerAtual === 1 ? 2 : 1;
+
+            } else {
+                alert('Resposta incorreta! Você volta um passo.');
+                movePlayer(color, -1);
+                newPosition -= 1;
+                playerAtual = playerAtual === 1 ? 2 : 1;
+            }
         }
 
         const gameCard = document.getElementById('gameCard');
