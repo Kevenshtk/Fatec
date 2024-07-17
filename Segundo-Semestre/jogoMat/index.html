@@ -16,7 +16,7 @@
     <main>
         <div class="selecao-de-personagens">
             <div class="lista">
-                <ul class="lista-de-personagens" onMouseOut="escolhaJodador1(); infoPersonagem()">
+                <ul class="lista-de-personagens" onMouseOut="exibirJodador1(); exibirCardPersonagem()">
                     <li class="personagem selecionado" onclick="escolherPersonagem('jogador1', 'bardo')" id="bardo"
                         data-name="Bardo">
                         <span class="tag">1P</span>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="lista">
-                <ul class="lista-de-personagens" onMouseOut="escolhaJodador2()">
+                <ul class="lista-de-personagens" onMouseOut="exibirJodador2()">
                     <li class="personagem-2" onclick="escolherPersonagem('jogador2', 'bardo')" id="bardo"
                         data-name="Bardo">
                         <span class="tag">2P</span>
@@ -86,16 +86,17 @@
 
         <div class="manual">
             <iframe src="manual/Livro.pdf" width="100%" height="600px"></iframe>
-            <img class="close" src="img/icons/close.png" alt="Sair" onclick="manual()">
+            <img class="close" src="img/icons/close.png" alt="Sair" onclick="exibirManual()">
         </div>
 
     </main>
 
     <button id="btn-iniciarJogo" onclick="iniciarJogo()">Iniciar Jogo</button>
-    <img class="btn-manual" src="img/icons/manual.png" onclick="manual()">
+    <img class="btn-manual" src="img/icons/manual.png" onclick="exibirManual()">
 
-    <script src="js/selecaoPerson.js"></script>
-    <script src="js/cardPerson.js"></script>
+    <script src="js/cardPersonagem.js"></script>
     <script src="js/manual.js"></script>
+    <script src="js/telaSelecao/selecaoPersonagem.js"></script>
+    <script src="js/telaSelecao/iniciarJogo.js"></script>
 </body>
 </html>

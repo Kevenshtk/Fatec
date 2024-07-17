@@ -229,8 +229,8 @@
     </div>
   </div>
 
-  <div class="infoPerson">
-    <div class="icons" onMouseOut="infoPersonagem()">
+  <div class="cardPersonagem">
+    <div class="icons" onMouseOut="exibirCardPersonagem()">
       <div class="icon" id="cardBardo">
         <img src="img/icons/bardoIcon.png" alt="Personagem Bardo">
       </div>
@@ -253,7 +253,7 @@
 
   <div class="manual">
     <iframe src="manual/Livro.pdf" width="100%" height="600px"></iframe>
-    <img class="close" src="img/icons/close.png" alt="Sair" onclick="manual()">
+    <img class="close" src="img/icons/close.png" alt="Sair" onclick="exibirManual()">
   </div>
 
   <div class="cardVitoria">
@@ -266,7 +266,7 @@
   </div>
   </div>
 
-  <img class="btn-manual" src="img/icons/manual.png" onclick="manual()">
+  <img class="btn-manual" src="img/icons/manual.png" onclick="exibirManual()">
 
 
   <div id="gameCard" class="cardPergunta">
@@ -292,9 +292,10 @@
     </div>
   </div>
 
-  <script src="js/tabuleiro.js" type="module"></script>
-  <script src="js/perguntas.js" type="module"></script>
+  <script src="js/tabuleiro/cardPertunta.js" type="module"></script>
+  <script src="js/tabuleiro/movimento.js" type="module"></script>
+  <script src="js/tabuleiro/perguntas.js" type="module"></script>
   <script src="js/manual.js"></script>
-  <script src="js/cardPerson.js"></script>
+  <script src="js/cardPersonagem.js"></script>
 </body>
 </html>

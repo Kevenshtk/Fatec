@@ -1,4 +1,9 @@
-function escolhaJodador1() {
+let personagensSelecionados = {
+    jogador1: null,
+    jogador2: null
+};
+
+function exibirJodador1() {
     if (personagensSelecionados.jogador1 == null) {
         const personagens = document.querySelectorAll('.personagem');
 
@@ -26,7 +31,7 @@ function escolhaJodador1() {
     }
 }
 
-function escolhaJodador2() {
+function exibirJodador2() {
     if (personagensSelecionados.jogador1 != null) {
         const personagens = document.querySelectorAll('.personagem-2');
 
@@ -55,23 +60,8 @@ function escolhaJodador2() {
 
 }
 
-let personagensSelecionados = {
-    jogador1: null,
-    jogador2: null
-};
-
 function escolherPersonagem(jogador, personagem) {
     personagensSelecionados[jogador] = personagem;
     alert(jogador + " " + personagem)
     document.getElementById(jogador + "Selecionado").innerText = "Selecionado";
-}
-
-function iniciarJogo() {
-    if (personagensSelecionados.jogador1 === null || personagensSelecionados.jogador2 === null) {
-        alert("Cada jogador deve escolher um personagem!");
-        return;
-    } else {
-        alert("Bora jogar");
-        window.location.href = 'tabuleiro.html';
-    }
 }

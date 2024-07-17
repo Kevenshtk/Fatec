@@ -55,7 +55,7 @@ body {
 .board {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
+    width: 406px;
 }
 
 .row {

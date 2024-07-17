@@ -1,4 +1,4 @@
-function infoPersonagem() {
+function exibirCardPersonagem() {
     const cards = document.querySelectorAll('.icon');
     const cardElement = document.getElementById('card');
 
