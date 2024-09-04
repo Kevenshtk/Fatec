@@ -23,8 +23,8 @@ const perguntasInicio = [
     {
         story: "Quase próximo a saída do reino, você sente alguém te observando, olhando aos arredores não encontra nada fora do comum. Mas quando se vira pra seguir a diante, uma lâmina é colocada em seu pescoço e uma voz desconhecida diz: Na função de 1º grau AX+B, A representa a inclinação da reta, valores de A positivos teremos uma reta crescente e valores de A negativos teremos uma reta decrescente",
         question: "Na função AX-3, qual é valor de A, para que a reta seja crescente?",
-        options: ["No valor -3.", "No valor 0.", "No valor 3.", "No valor 5."],
-        correctAnswer: "No valor 4."
+        options: ["-3.", "0.", "3.", "-5."],
+        correctAnswer: "3."
     },
 
     {
@@ -44,8 +44,8 @@ const perguntasInicio = [
     {
         story: "Enquanto andava distraído pela estrada do reino, você escuta um desconhecido gritar: Na função de 1º grau AX+B, A representa a inclinação da reta, valores de A positivos teremos uma reta crescente e valores de A negativos teremos uma reta decrescente. Olhando na direção da voz, você percebe uma carroça desgovernada indo em sua direção.",
         question: "Na função AX+4, qual é valor de A, para que a reta seja decrescente?",
-        options: ["No valor 4.", "No valor 0.", "No valor -4.", "No valor 2."],
-        correctAnswer: "No valor -4."
+        options: ["4.", "0.", "-4.", "2."],
+        correctAnswer: "-4."
     },
 
     {
@@ -117,7 +117,7 @@ const perguntasPonte = [
 const perguntasFloresta = [
     {
         story: "Entre as sombras da floresta, sob um amontoado de folhas, você se encontra com um comerciante élfico usando trajes exóticos, com um aceno gracioso ele o cumprimenta dizendo: Na função de 2º grau AX²+BX+C, o Δ indica quantas raízes essa função possuí, Δ maior que 0 indica que tem 2 raízes, Δ menor que 0 indica que tem raízes e Δ igual a 0 indica que tem 1 raiz.",
-        question: "Na função X²+2X-1, onde Δ equivale a 0, quantas raízes possuí?",
+        question: "Na função X²+2X+1, onde Δ equivale a 0, quantas raízes possuí?",
         options: ["Tem 4 raiz.", "Tem 2 raiz.", "Tem 1 raiz.", "Tem 3 raiz."],
         correctAnswer: "Tem 1 raiz."
     },
