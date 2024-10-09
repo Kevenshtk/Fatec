@@ -248,7 +248,7 @@ const perguntasVale = [
     {
         story: "Navegando pelas águas do pântano uma silhueta majestosa surge entre os galhos retorcidos das árvores, revelando ser um urso coruja, você tenta comunicação dizendo: A função de 2º grau AX²+BX+C pode possuir até duas raízes, para acha-las basta usar a equação (x = (-B +- raiz de Δ) / (2 x A)), onde você vai somar ou subtrair o valor negativo de B pela raiz quadrada do Δ e dividir por duas o valor de A.",
         question: "Na função X²-3X+2, onde Δ equivale a 1, quais os valores das raízes?",
-        options: ["ão 2 e 2.", "ão 2 e 3.", "ão 3 e 1.", "ão 1 e 2."],
+        options: ["são 2 e 2.", "são 2 e 3.", "são 3 e 1.", "são 1 e 2."],
         correctAnswer: "são 1 e 2."
     },
 
