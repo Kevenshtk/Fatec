@@ -6,7 +6,6 @@ body {
 body::before {
   content: '';
   background-image: url(../img/fundo-site.png);
-  background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -51,12 +50,12 @@ main {
 }
 
 .selecao-de-personagens .personagem-grande .nome h2 {
+  width: 100%;
+  font-size: 27px;
   color: var(--cor-padrao);
   font-family: 'commad', sans-serif;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  font-size: 27px;
 }
 
 .selecao-de-personagens .personagem-grande.personagem-jogador-1 .nome::before {
@@ -147,18 +146,35 @@ main {
   animation-duration: alternate;
 }
 
-#btn-iniciarJogo {
+.btn-iniciarJogo, 
+.btn-1-jogador,
+.btn-2-jogador {
+  width: 150px;
   padding: 15px;
   border-radius: 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition-duration: 0.5s;
+}
 
+.btn-iniciarJogo{
   position: absolute;
   bottom: 10%;
   left: 46%;
 }
 
-#btn-iniciarJogo:hover {
+.btn-1-jogador{
+  position: absolute;
+  bottom: 38%;
+  left: 46%;
+}
+
+.btn-2-jogador{
+  position: absolute;
+  bottom: 30%;
+  left: 46%;
+}
+
+.btn-iniciarJogo:hover, .btn-1-jogador:hover, .btn-2-jogador:hover {
   color: rgb(208, 208, 208);
   background-color: rgba(0, 0, 0, 0.294);
 }
