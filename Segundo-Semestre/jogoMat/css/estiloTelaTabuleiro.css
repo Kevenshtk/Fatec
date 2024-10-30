@@ -1,10 +1,10 @@
 body {
     background-image: url(../img/fundo-site.png);
-    background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.boards {
+.containerBoards {
     width: 100%;
     display: flex;
     justify-content: center;
