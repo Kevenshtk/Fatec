@@ -1,18 +1,3 @@
-body {
-    font-family: Courier, monospace;
-    background: var($cor-secundaria);
-
-    ::before{
-        content: '';
-        @include background(url(../img/fundo-site.png));
-
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0.4;
-    }
-}
-
 main{
     min-height: 100vh;
     display: flex;
@@ -49,7 +34,7 @@ main{
 
           .nome h2{
             width: 100%;
-            color: var($cor-padrao);
+            color: $cor-padrao;
             font-family: 'commad', sans-serif;
             font-size: 27px;
             position: absolute;
@@ -58,11 +43,11 @@ main{
       }
 
       .personagem-grande.personagem-jogador-1 .nome::before {
-        background-color: var($cor-azul-principal);
+        background-color: $cor-azul-principal;
       }
 
       .personagem-grande.personagem-jogador-2 .nome::before {
-        background-color: var($cor-vermelha-principal);
+        background-color: $cor-vermelha-principal;
       }
 }
 
@@ -93,7 +78,7 @@ main{
             position: absolute;
             top: 5px;
             left: 5px;
-            color: var($cor-azul-media);
+            color: $cor-azul-media;
             transition: opacity .3s ease-in-out;
             animation: text-glowing-blue .3s ease-in-out infinite;
             animation-duration: alternate;
@@ -101,7 +86,7 @@ main{
     }
 
     .personagem.selecionado {
-        border: 2px solid var($cor-azul-media);
+        border: 2px solid $cor-azul-media;
         animation: c-glowing-blue .8s ease-in-out infinite;
         animation-duration: alternate;
 
@@ -119,12 +104,12 @@ main{
         z-index: 2;
     }
 
-    .personagem-2.jogador-2-selecionado {
-        border: 2px solid var($cor-vermelho-media);
+    .personagem-2.jogador-2-selecionado{
+        border: 2px solid $cor-vermelha-media;
         animation: c-glowing-red .8s ease-in-out infinite;
         animation-duration: alternate;
 
-        :hover{
+        &:hover{
             animation: c-glowing-red .3s ease-in-out infinite;
             animation-duration: alternate;
         }
@@ -137,22 +122,53 @@ main{
     }
 }
 
-.btn-iniciarJogo {
+.btn-iniciarJogo, .btn-1-jogador, .btn-2-jogador {
+    width: 150px;
     padding: 15px;
     border-radius: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition-duration: 0.5s;
-  
-    position: absolute;
-    bottom: 10%;
-    left: 46%;
 
-    :hover{
+    &:hover{
         color: rgb(208, 208, 208);
         background-color: rgba(0, 0, 0, 0.294);
     }
 }
 
+.btn-iniciarJogo{
+    position: absolute;
+    bottom: 10%;
+    left: 46%;
+}
+
+.btn-1-jogador{
+    position: absolute;
+    bottom: 38%;
+    left: 46%;
+}
+
+.btn-2-jogador{
+    position: absolute;
+    bottom: 30%;
+    left: 46%;
+}
+
 .card{
     width: 500px;
+}
+
+.modo-jogo-selecionado{
+    border: 2px solid $cor-vermelha-media;
+    animation: c-glowing-red .8s ease-in-out infinite;
+    animation-duration: alternate;
+
+    &:hover{
+        animation: c-glowing-red .3s ease-in-out infinite;
+        animation-duration: alternate;
+    }
+}
+
+.desabilitar{ 
+    opacity: 40%;
+    cursor: no-drop;
 }

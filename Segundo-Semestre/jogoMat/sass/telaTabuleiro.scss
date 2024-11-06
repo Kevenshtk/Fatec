@@ -1,7 +1,3 @@
-body {
-    @include background(url(../img/fundo-site.png));
-}
-
 .containerBoards {
     width: 100%;
     display: flex;
@@ -9,27 +5,27 @@ body {
     flex-wrap: wrap;
     gap: 20px;
 
-    #inicio {
+    .inicio {
         @include background(url(../img/imgTabuleiro/inicio.jpg));
     }
 
-    #ponte {
+    .ponte {
         @include background(url(../img/imgTabuleiro/ponte.jpg));
     }
     
-    #floresta {
+    .floresta {
         @include background(url(../img/imgTabuleiro/floresta.jpg));
     }
     
-    #deserto {
+    .deserto {
         @include background(url(../img/imgTabuleiro/deserto.jpg));
     }
     
-    #vale {
+    .vale {
         @include background(url(../img/imgTabuleiro/vale.jpg));
     }
     
-    #vulcao {
+    .vulcao {
         @include background(url(../img/imgTabuleiro/vulcao.jpg));
     }
     
@@ -93,7 +89,7 @@ body {
             width: 120px;
             transition-duration: 0.10s;
 
-            :hover{
+            &:hover{
                 width: 140px;
             }
 
@@ -108,7 +104,7 @@ body {
     display: none;
     width: 48%;
     height: 40%;
-    background-color: rgb(255, 255, 255);
+    background-color: $cor-padrao;
     border-radius: 10px;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.404);
     padding: 30px;
@@ -153,7 +149,7 @@ body {
             bottom: 10px;
             transition-duration: 0.3s;
 
-            :hover{
+            &:hover{
                 border: 2px solid green;
                 background-color: rgba(0, 0, 0, 0.158);
             }

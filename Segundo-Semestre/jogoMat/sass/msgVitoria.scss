@@ -1,9 +1,9 @@
 .cardVitoria {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
     backdrop-filter: blur(20px);
     visibility: hidden;
     opacity: 0;
