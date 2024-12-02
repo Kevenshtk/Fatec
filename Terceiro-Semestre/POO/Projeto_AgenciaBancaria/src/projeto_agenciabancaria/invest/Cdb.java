@@ -1,15 +1,29 @@
 package projeto_agenciabancaria.invest;
 
+import projeto_agenciabancaria.conta.Conta;
+
 public class Cdb extends Investimento{
-    private double redimento;
     private double imposto;
     private double saldoAtual;
-    private double saldoLiquido;
 
-    public Cdb(int id, String tipoInvestimento, double valorInvestido, double redimento, double imposto, String data) {
-        super(id, tipoInvestimento, valorInvestido, data);
+    public Cdb(int idInvestimento, double valorInvestido, double redimento, double imposto, String data) {
+        super(idInvestimento, "CDB", valorInvestido, data);
         this.redimento = redimento;
         this.imposto = imposto;
+    }
+    
+    @Override
+    public void aplicarInvestimento(Conta conta){
+        Cdb produto = new Cdb(idInvestimento, valorInvestido, redimento, imposto, data);
+        
+        if (conta.verificarSaldo(valorInvestido)){
+            double saldoConta = conta.getSaldo();
+            conta.setSaldo(saldoConta - valorInvestido);
+            
+            System.out.println("Investimento realizada com sucesso !\n");
+        } else {
+            System.out.println("Erro no investimento: Saldo insuficiente.\n");
+        }
     }
     
     @Override

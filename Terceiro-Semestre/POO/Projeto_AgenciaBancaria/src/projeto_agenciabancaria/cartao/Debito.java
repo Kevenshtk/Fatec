@@ -5,7 +5,7 @@ import projeto_agenciabancaria.Senha;
 
 public class Debito extends Cartao{
 
-    public Debito(String idCartao, String numero, Senha senha, int cvc, double limite) {
+    public Debito(int idCartao, String numero, Senha senha, int cvc, double limite) {
         super(idCartao, numero, senha, cvc, limite);
     }
     
@@ -13,7 +13,9 @@ public class Debito extends Cartao{
         return 1000.0;
     }
     
-    public void exibirDadosCDebito(){
-        super.exibirDetalhesCartao();
+    @Override
+    public void exibirDetalhesCartao(){
+        System.out.println("Cartao: ID= "+idCartao+", Numero= "+numero+", CVC= "+cvc);
+        System.out.println("Senha: "+senha.toString());
     }
 }
