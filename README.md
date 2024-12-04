@@ -1,6 +1,3 @@
-# Fatec
-Este repositório está reservado a todos os materiais e projeto desenvolvido durante o curso
-
 ## Projetos
 
  - 2° Semestre
@@ -20,15 +17,15 @@ Este repositório está reservado a todos os materiais e projeto desenvolvido du
     garras do inimigo.
 
     Tela de seleção de personagens:
-    ![Imagem tela inicio](https://kevenshtk.github.io/Fatec/Segundo-Semestre/jogoMat/inicio.png)
+    ![Imagem tela inicio](https://kevenshtk.github.io/cronicas-de-calcularia/img/inicio.png)
    
    Tela dos tabuleiros:
-   ![Imagem tabuleiros](https://kevenshtk.github.io/Fatec/Segundo-Semestre/jogoMat/tabuleiro.png)
+   ![Imagem tabuleiros](https://kevenshtk.github.io/cronicas-de-calcularia/img/tabuleiro.png)
 
     Link do repositório: Em breve !
     
   - 3° Semestre
-  
+
     **Livraria Alma do Saber**
 
     O projeto foi desenvolvido nas aulas de Estrutura de Dados, utilizando a linguagem C, com o objetivo de simular um sistema para uma livraria. O projeto permite praticar o uso de arquivos binários para armazenar informações de livros, clientes e vendas.
