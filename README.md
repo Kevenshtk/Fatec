@@ -22,7 +22,7 @@
    Tela dos tabuleiros:
    ![Imagem tabuleiros](https://kevenshtk.github.io/cronicas-de-calcularia/img/tabuleiro.png)
 
-    Link do repositório: Em breve !
+    [Link do repositório](https://github.com/Kevenshtk/cronicas-de-calcularia)
     
   - 3° Semestre
 
