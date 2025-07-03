@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição para Palestra</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+  <link rel="stylesheet" href="styles/css/styles.min.css">
+</head>
+
+<body>
+  <main class="form-slider">
+    <button class="btn-seta btn-voltar" id="btn-voltar">
+      <img src="img/seta.png" alt="seta voltar">
+    </button>
+
+    <div class="lista-form">
+      <div class="container mt-5 form selecionado" id="containerFormInscricao">
+        <h1 class="mb-4">Área de inscrição</h1>
+        <form action="" method="post" id="formInscricao">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome completo *</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="tel" class="form-label">Celular *</label>
+            <input type="tel" class="form-control" id="celular" name="celular" placeholder="(xx) xxxxx-xxxx" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Endereço de e-mail *</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@email.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="idade" class="form-label">Empresa *</label>
+            <input type="text" class="form-control" id="empresa" name="empresa" required>
+          </div>
+          <div class="mb-3">
+            <label for="jogo_preferido" class="form-label">Cargo</label>
+            <input type="text" class="form-control" id="cargo" name="cargo">
+          </div>
+          <div class="mb-3">
+            <label for="palestras" class="form-label">Palestras *</label>
+            <div class="form-group form-check" id="palestras">
+              <div class="opt">
+                <input type="checkbox" class="form-check-input" id="option-1">
+                <label class="form-check-label" for="option-1" id="opt-palestra">Novas tecnologias</label>
+              </div>
+              <div class="opt">
+                <input type="checkbox" class="form-check-input" id="option-2">
+                <label class="form-check-label" for="option-2" id="opt-palestra">Computadores Quânticos</label>
+              </div>
+              <div class="opt">
+                <input type="checkbox" class="form-check-input" id="option-3">
+                <label class="form-check-label" for="option-3" id="opt-palestra">Soft skills</label>
+              </div>
+              <div class="opt">
+                <input type="checkbox" class="form-check-input" id="option-4">
+                <label class="form-check-label" for="option-4" id="opt-palestra">Home office</label>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="container mt-5 form" id="containerFormEndereco">
+        <h2>Preencha seu Endereço</h2>
+        <div class="form-group">
+          <label for="cep">CEP</label>
+          <div class="linha">
+            <input type="text" class="form-control" id="cep" name="cep" placeholder="Digite seu CEP">
+            <button type="button" class="btn btn-primary" id="btn-buscar">Buscar</button>
+          </div>
+          <small class="form-text text-dark">Se souber o CEP, o restante do endereço será preenchido
+            automaticamente.</small>
+        </div>
+        <div class="form-group">
+          <div class="linha">
+            <label for="logradouro">Logradouro *</label>
+            <label for="numero">Número *</label>
+          </div>
+          <div class="linha">
+            <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder="Digite o Logradouro"
+              required>
+            <input type="text" class="form-control campo-p" id="numero" name="numero" placeholder="Digite o Número"
+              required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bairro">Bairro *</label>
+          <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Digite o Bairro" required>
+        </div>
+        <div class="form-group">
+          <label for="complemento">Complemento</label>
+          <input type="text" class="form-control" id="complemento" name="complemento"
+            placeholder="Digite o Complemento">
+        </div>
+        <div class="form-group">
+          <div class="linha">
+            <label for="cidade">Cidade *</label>
+            <label for="estado">Estado *</label>
+          </div>
+
+          <div class="linha">
+            <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Digite a Cidade" required>
+            <input type="text" class="form-control" id="estado" name="estado" placeholder="Digite o Estado" required>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="btn-enviar">Enviar</button>
+
+        </form>
+      </div>
+    </div>
+
+    <button class="btn-seta" id="btn-avancar">
+      <img src="img/seta.png" alt="seta avançar">
+    </button>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

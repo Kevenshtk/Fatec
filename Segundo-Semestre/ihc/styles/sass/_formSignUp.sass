@@ -1,0 +1,46 @@
+@use "variables" as *
+@use "mixins" as *
+
+.lista-form
+    width: 510px
+    height: 650px
+    position: relative
+
+    .form
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        border: $style-border
+        border-radius: 10px
+        box-shadow: rgba(8, 8, 8, 0.2) 8px 7px 10px
+        opacity: 0
+        background-color: rgba(0, 0, 0, 0.095)
+        padding: 12px
+        position: absolute
+        transition: 0.3s ease-in-out
+
+        #palestras
+            display: flex
+            flex-wrap: wrap
+            gap: 25px
+
+        #cep
+            @include widthInput(50%)
+
+        small
+            max-width: 50%
+
+        #logradouro, #cidade
+            @include widthInput(60%)
+
+        #numero , #estado
+            @include widthInput(30%)
+
+        .linha
+            display: flex
+            justify-content: space-between
+
+    .selecionado
+        opacity: 1
+        z-index: 1
