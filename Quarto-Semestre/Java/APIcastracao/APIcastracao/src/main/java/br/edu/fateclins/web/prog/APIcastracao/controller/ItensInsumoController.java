@@ -1,8 +1,8 @@
 package br.edu.fateclins.web.prog.APIcastracao.controller;
 
-import br.edu.fateclins.web.prog.APIcastracao.Dto.ItensInsumoDto;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.ItensInsumoDTO;
 import br.edu.fateclins.web.prog.APIcastracao.module.ItensInsumo;
-import br.edu.fateclins.web.prog.APIcastracao.repository.itensInsumoRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.ItensInsumoRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,10 +17,10 @@ import java.util.Optional;
 public class ItensInsumoController {
 
     @Autowired
-    itensInsumoRepository repository;
+    ItensInsumoRepository repository;
 
     @PostMapping()
-    public ResponseEntity<ItensInsumo> salvarItensInsumo(@RequestBody ItensInsumoDto dto) {
+    public ResponseEntity<ItensInsumo> salvarItensInsumo(@RequestBody ItensInsumoDTO dto) {
         var itensInsumoModelo = new ItensInsumo();
         BeanUtils.copyProperties(dto, itensInsumoModelo);
         return ResponseEntity.status(201).body(repository.save(itensInsumoModelo));
@@ -42,7 +42,7 @@ public class ItensInsumoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateItensInsumo(@PathVariable(value = "id") Integer id,
-                                                    @RequestBody ItensInsumoDto dto) {
+                                                    @RequestBody ItensInsumoDTO dto) {
         Optional<ItensInsumo> itens = repository.findById(id);
         if (itens.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Itens não encontrado!");

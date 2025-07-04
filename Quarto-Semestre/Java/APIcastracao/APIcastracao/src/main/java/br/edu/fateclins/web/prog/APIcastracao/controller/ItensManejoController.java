@@ -1,8 +1,8 @@
 package br.edu.fateclins.web.prog.APIcastracao.controller;
 
-import br.edu.fateclins.web.prog.APIcastracao.Dto.ItensManejoDto;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.ItensManejoDTO;
 import br.edu.fateclins.web.prog.APIcastracao.module.ItensManejo;
-import br.edu.fateclins.web.prog.APIcastracao.repository.intensManejoRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.IntensManejoRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,10 +17,10 @@ import java.util.Optional;
 public class ItensManejoController {
 
     @Autowired
-    intensManejoRepository repository;
+    IntensManejoRepository repository;
 
     @PostMapping()
-    public ResponseEntity<ItensManejo> salvarItensManejo(@RequestBody ItensManejoDto dto) {
+    public ResponseEntity<ItensManejo> salvarItensManejo(@RequestBody ItensManejoDTO dto) {
         var itensManejoModelo = new ItensManejo();
         BeanUtils.copyProperties(dto, itensManejoModelo);
         return ResponseEntity.status(201).body(repository.save(itensManejoModelo));
@@ -42,7 +42,7 @@ public class ItensManejoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateItensManejo(@PathVariable(value = "id") Integer id,
-                                               @RequestBody ItensManejoDto dto) {
+                                               @RequestBody ItensManejoDTO dto) {
         Optional<ItensManejo> itens = repository.findById(id);
         if (itens.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Itens não encontrado!");

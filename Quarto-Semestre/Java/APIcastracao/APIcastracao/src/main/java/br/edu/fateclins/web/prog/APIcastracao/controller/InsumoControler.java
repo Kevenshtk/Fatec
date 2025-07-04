@@ -1,8 +1,8 @@
 package br.edu.fateclins.web.prog.APIcastracao.controller;
 
-import br.edu.fateclins.web.prog.APIcastracao.Dto.insumoDto;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.InsumoDTO;
 import br.edu.fateclins.web.prog.APIcastracao.module.Insumo;
-import br.edu.fateclins.web.prog.APIcastracao.repository.insumoRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.InsumoRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,13 +14,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/insumo")
-public class insumoControler {
+public class InsumoControler {
 
     @Autowired
-    insumoRepository repository;
+    InsumoRepository repository;
 
     @PostMapping()
-    public ResponseEntity<Insumo> salvarInsumo(@RequestBody insumoDto dto) {
+    public ResponseEntity<Insumo> salvarInsumo(@RequestBody InsumoDTO dto) {
         var insumoModelo = new Insumo();
         BeanUtils.copyProperties(dto, insumoModelo);
         return ResponseEntity.status(201).body(repository.save(insumoModelo));
@@ -43,7 +43,7 @@ public class insumoControler {
 
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateInsumo(@PathVariable(value = "id") Integer id,
-                                               @RequestBody insumoDto dto) {
+                                               @RequestBody InsumoDTO dto) {
         Optional<Insumo> insumo = repository.findById(id);
         if (insumo.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Insumo não encontrado!");

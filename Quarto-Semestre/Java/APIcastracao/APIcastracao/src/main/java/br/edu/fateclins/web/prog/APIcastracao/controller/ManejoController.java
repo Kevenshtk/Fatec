@@ -1,13 +1,12 @@
 package br.edu.fateclins.web.prog.APIcastracao.controller;
 
-import br.edu.fateclins.web.prog.APIcastracao.Dto.ItensInsumoDto;
-import br.edu.fateclins.web.prog.APIcastracao.Dto.manejoDto;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.ItensInsumoDTO;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.ManejoDTO;
 import br.edu.fateclins.web.prog.APIcastracao.module.Insumo;
 import br.edu.fateclins.web.prog.APIcastracao.module.ItensInsumo;
 import br.edu.fateclins.web.prog.APIcastracao.module.Manejo;
-import br.edu.fateclins.web.prog.APIcastracao.repository.insumoRepository;
-import br.edu.fateclins.web.prog.APIcastracao.repository.manejoRepository;
-import org.springframework.beans.BeanUtils;
+import br.edu.fateclins.web.prog.APIcastracao.repository.InsumoRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.ManejoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,23 +18,23 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/manejo")
-public class manejoController {
+public class ManejoController {
 
     @Autowired
-    manejoRepository repository;
+    ManejoRepository repository;
 
     @Autowired
-    private insumoRepository insumoRepository;
+    private InsumoRepository insumoRepository;
 
     @PostMapping()
-    public ResponseEntity<Manejo> salvarManejo(@RequestBody manejoDto dto) {
+    public ResponseEntity<Manejo> salvarManejo(@RequestBody ManejoDTO dto) {
         Manejo manejo = new Manejo();
         manejo.setNome(dto.nome());
         manejo.setDescricao(dto.descricao());
 
         List<ItensInsumo> itens = new ArrayList<>();
 
-        for (ItensInsumoDto itemDTO : dto.itens()) {
+        for (ItensInsumoDTO itemDTO : dto.itens()) {
             Optional<Insumo> insumoOpt = insumoRepository.findById(itemDTO.idInsumo());
             if (insumoOpt.isEmpty()) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -71,7 +70,7 @@ public class manejoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateManejo(@PathVariable(value = "id") Integer id,
-                                                    @RequestBody manejoDto dto) {
+                                                    @RequestBody ManejoDTO dto) {
         Optional<Manejo> manejoOpt = repository.findById(id);
         if (manejoOpt.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Manejo não encontrado!");
@@ -83,7 +82,7 @@ public class manejoController {
 
         List<ItensInsumo> novosItens = new ArrayList<>();
 
-        for (ItensInsumoDto itemDTO : dto.itens()) {
+        for (ItensInsumoDTO itemDTO : dto.itens()) {
             Optional<Insumo> insumoOpt = insumoRepository.findById(itemDTO.idInsumo());
             if (insumoOpt.isEmpty()) {
                 return ResponseEntity.badRequest().build();

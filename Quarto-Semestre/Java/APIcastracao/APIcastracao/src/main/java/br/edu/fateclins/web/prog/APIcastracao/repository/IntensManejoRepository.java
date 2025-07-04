@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface intensManejoRepository extends JpaRepository<ItensManejo, Integer> {
+public interface IntensManejoRepository extends JpaRepository<ItensManejo, Integer> {
 }

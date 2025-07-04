@@ -1,8 +1,8 @@
 package br.edu.fateclins.web.prog.APIcastracao.controller;
 
-import br.edu.fateclins.web.prog.APIcastracao.Dto.animalDto;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.AnimalDTO;
 import br.edu.fateclins.web.prog.APIcastracao.module.Animal;
-import br.edu.fateclins.web.prog.APIcastracao.repository.animalRespository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.AnimalRespository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,13 +14,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/animal")
-public class animalController {
+public class AnimalController {
 
     @Autowired
-    animalRespository respository;
+    AnimalRespository respository;
 
     @PostMapping()
-    public ResponseEntity<Animal> salvarAnimal(@RequestBody animalDto dto) {
+    public ResponseEntity<Animal> salvarAnimal(@RequestBody AnimalDTO dto) {
         var animalModelo = new Animal();
         BeanUtils.copyProperties(dto, animalModelo);
         return ResponseEntity.status(201).body(respository.save(animalModelo));
@@ -43,7 +43,7 @@ public class animalController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateAnimal(@PathVariable(value = "id") Integer id,
-                                               @RequestBody animalDto dto) {
+                                               @RequestBody AnimalDTO dto) {
         Optional<Animal> produto = respository.findById(id);
         if (produto.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Animal não encontrado!");

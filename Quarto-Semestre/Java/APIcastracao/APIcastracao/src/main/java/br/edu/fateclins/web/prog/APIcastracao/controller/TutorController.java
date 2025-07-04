@@ -1,8 +1,8 @@
 package br.edu.fateclins.web.prog.APIcastracao.controller;
 
-import br.edu.fateclins.web.prog.APIcastracao.Dto.tutorDto;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.TutorDTO;
 import br.edu.fateclins.web.prog.APIcastracao.module.Tutor;
-import br.edu.fateclins.web.prog.APIcastracao.repository.tutorRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.TutorRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,13 +14,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/tutor")
-public class tutorController {
+public class TutorController {
 
     @Autowired
-    tutorRepository repository;
+    TutorRepository repository;
 
     @PostMapping()
-    public ResponseEntity<Tutor> salvarTutor(@RequestBody tutorDto dto) {
+    public ResponseEntity<Tutor> salvarTutor(@RequestBody TutorDTO dto) {
         var tutorModelo = new Tutor();
         BeanUtils.copyProperties(dto, tutorModelo);
         return ResponseEntity.status(201).body(repository.save(tutorModelo));
@@ -43,7 +43,7 @@ public class tutorController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateTutor(@PathVariable(value = "id") Integer id,
-                                               @RequestBody tutorDto dto) {
+                                               @RequestBody TutorDTO dto) {
         Optional<Tutor> tutor = repository.findById(id);
         if (tutor.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Tutor não encontrado!");

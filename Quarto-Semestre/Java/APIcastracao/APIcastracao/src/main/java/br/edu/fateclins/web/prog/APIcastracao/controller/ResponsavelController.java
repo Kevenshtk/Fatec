@@ -1,8 +1,8 @@
 package br.edu.fateclins.web.prog.APIcastracao.controller;
 
-import br.edu.fateclins.web.prog.APIcastracao.Dto.responsavelDto;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.ResponsavelDTO;
 import br.edu.fateclins.web.prog.APIcastracao.module.Responsavel;
-import br.edu.fateclins.web.prog.APIcastracao.repository.responsavelRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.ResponsavelRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,13 +14,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/responsavel")
-public class responsavelController {
+public class ResponsavelController {
 
     @Autowired
-    responsavelRepository repository;
+    ResponsavelRepository repository;
 
     @PostMapping()
-    public ResponseEntity<Responsavel> salvarResponsavel(@RequestBody responsavelDto dto) {
+    public ResponseEntity<Responsavel> salvarResponsavel(@RequestBody ResponsavelDTO dto) {
         var responsavelModelo = new Responsavel();
         BeanUtils.copyProperties(dto, responsavelModelo);
         return ResponseEntity.status(201).body(repository.save(responsavelModelo));
@@ -42,7 +42,7 @@ public class responsavelController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateResponsavel(@PathVariable(value = "id") Integer id,
-                                                     @RequestBody responsavelDto dto) {
+                                                     @RequestBody ResponsavelDTO dto) {
         Optional<Responsavel> responsavel = repository.findById(id);
         if (responsavel.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Responsavel não encontrado!");

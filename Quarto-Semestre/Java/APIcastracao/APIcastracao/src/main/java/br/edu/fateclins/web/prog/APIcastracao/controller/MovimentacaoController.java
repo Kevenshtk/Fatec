@@ -1,10 +1,10 @@
 package br.edu.fateclins.web.prog.APIcastracao.controller;
 
-import br.edu.fateclins.web.prog.APIcastracao.Dto.movimentacaoDto;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.MovimentacaoDTO;
 import br.edu.fateclins.web.prog.APIcastracao.module.Insumo;
 import br.edu.fateclins.web.prog.APIcastracao.module.Movimentacao;
-import br.edu.fateclins.web.prog.APIcastracao.repository.insumoRepository;
-import br.edu.fateclins.web.prog.APIcastracao.repository.movimentacaoRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.InsumoRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.MovimentacaoRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,16 +16,16 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/movimentacao")
-public class movimentacaoController {
+public class MovimentacaoController {
 
     @Autowired
-    movimentacaoRepository repository;
+    MovimentacaoRepository repository;
 
     @Autowired
-    insumoRepository insumoRepository;
+    InsumoRepository insumoRepository;
 
     @PostMapping()
-    public ResponseEntity<Movimentacao> salvarMovimentacao(@RequestBody movimentacaoDto dto) {
+    public ResponseEntity<Movimentacao> salvarMovimentacao(@RequestBody MovimentacaoDTO dto) {
         Optional<Insumo> insumoOpt = insumoRepository.findById(dto.insumo());
         if (insumoOpt.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
@@ -57,7 +57,7 @@ public class movimentacaoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateMovimentacao(@PathVariable(value = "id") Integer id,
-                                                    @RequestBody movimentacaoDto dto) {
+                                                    @RequestBody MovimentacaoDTO dto) {
         Optional<Movimentacao> movimentacao = repository.findById(id);
         if (movimentacao.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Movimentação não encontrado!");

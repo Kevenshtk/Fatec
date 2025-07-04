@@ -1,13 +1,12 @@
 package br.edu.fateclins.web.prog.APIcastracao.controller;
 
-import br.edu.fateclins.web.prog.APIcastracao.Dto.ItensManejoDto;
-import br.edu.fateclins.web.prog.APIcastracao.Dto.agendamentoDto;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.ItensManejoDTO;
+import br.edu.fateclins.web.prog.APIcastracao.Dto.AgendamentoDTO;
 import br.edu.fateclins.web.prog.APIcastracao.module.*;
-import br.edu.fateclins.web.prog.APIcastracao.repository.agendamentoRepository;
-import br.edu.fateclins.web.prog.APIcastracao.repository.animalRespository;
-import br.edu.fateclins.web.prog.APIcastracao.repository.manejoRepository;
-import br.edu.fateclins.web.prog.APIcastracao.repository.responsavelRepository;
-import org.springframework.beans.BeanUtils;
+import br.edu.fateclins.web.prog.APIcastracao.repository.AgendamentoRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.AnimalRespository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.ManejoRepository;
+import br.edu.fateclins.web.prog.APIcastracao.repository.ResponsavelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,22 +18,22 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/agendamento")
-public class agendamentoController {
+public class AgendamentoController {
 
     @Autowired
-    agendamentoRepository repository;
+    AgendamentoRepository repository;
 
     @Autowired
-    private manejoRepository manejoRepository;
+    private ManejoRepository manejoRepository;
 
     @Autowired
-    private responsavelRepository responsavelRepository;
+    private ResponsavelRepository responsavelRepository;
 
     @Autowired
-    private animalRespository animalRepository;
+    private AnimalRespository animalRepository;
 
     @PostMapping()
-    public ResponseEntity<Agendamento> salvarAgendamento(@RequestBody agendamentoDto dto) {
+    public ResponseEntity<Agendamento> salvarAgendamento(@RequestBody AgendamentoDTO dto) {
         var agendamento = new Agendamento();
         agendamento.setDataPrevista(dto.dataPrevista());
         agendamento.setObservacao(dto.observacao());
@@ -53,7 +52,7 @@ public class agendamentoController {
 
         List<ItensManejo> itens = new ArrayList<>();
 
-        for (ItensManejoDto itemDTO : dto.itens()) {
+        for (ItensManejoDTO itemDTO : dto.itens()) {
             Optional<Manejo> manejoOpt = manejoRepository.findById(itemDTO.idManejo());
             if (manejoOpt.isEmpty()) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -89,7 +88,7 @@ public class agendamentoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateAgendamento(@PathVariable(value = "id") Integer id,
-                                               @RequestBody agendamentoDto dto) {
+                                               @RequestBody AgendamentoDTO dto) {
         Optional<Agendamento> agendamentoOpt = repository.findById(id);
         if (agendamentoOpt.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Agendamento não encontrado!");
@@ -113,7 +112,7 @@ public class agendamentoController {
 
         List<ItensManejo> novosItens = new ArrayList<>();
 
-        for (ItensManejoDto itemDTO : dto.itens()) {
+        for (ItensManejoDTO itemDTO : dto.itens()) {
             Optional<Manejo> manejoOpt = manejoRepository.findById(itemDTO.idManejo());
             if (manejoOpt.isEmpty()) {
                 return ResponseEntity.badRequest().build();
