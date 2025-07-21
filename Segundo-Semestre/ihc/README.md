@@ -1,6 +1,7 @@
 # Formulário de Inscrição
 
 ## Sobre o projeto
+
  O projeto foi desenvolvido no 2º semestre do curso, durante a disciplina de IHC (Interação Humana Computador), cursada no primeiro semestre do ano de 2024 e ministrada pelo professor Diego Henrique Emygdio Lázaro.
  
  O site trata-se de uma landing page (página única), intuitiva, responsiva e que utiliza uma paleta de cores monocromática.
