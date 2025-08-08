@@ -60,7 +60,7 @@ public class Cliente {
     
     public Investimento getInvestimento(int id) {
         for (Investimento produto : investimentos) {
-            if (produto.getId() == id) {
+            if (produto.getIdInvestimento() == id) {
                 return produto;
             }
         }
@@ -136,7 +136,7 @@ public class Cliente {
     }
 
         for(Investimento i : investimentos) {
-        todasTransacoes.add(new Transacao(i.getId(), "Investimento", "Investimento do tipo " + i.getTipoInvestimento(), i.getValorInvestido(), i.getData()));
+        todasTransacoes.add(new Transacao(i.getIdInvestimento(), "Investimento", "Investimento do tipo " + i.getTipoInvestimento(), i.getValorInvestido(), i.getData()));
     }
 
         Collections.sort(todasTransacoes, Comparator.comparing(Transacao::getData));
