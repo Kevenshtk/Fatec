@@ -83,9 +83,9 @@
 ## Diagrama de Classes
 
 ![Diagrama de Classes antes da aplicação do SOLID](https://kevenshtk.github.io/Fatec/Terceiro-Semestre/POO/Projeto_AgenciaBancaria/src/assets/antesSOLID.png)
-*Diagrama de classe antes da aplicação do SOLID.*
+*Diagrama de classes antes da aplicação do SOLID.*
 
 ![Diagrama de Classes depois da aplicação do SOLID](https://kevenshtk.github.io/Fatec/Terceiro-Semestre/POO/Projeto_AgenciaBancaria/src/assets/depoisSOLID.png)
-*Diagrama de classe depois da aplicação do SOLID*
+*Diagrama de classes depois da aplicação do SOLID*
 
-No diagrama acima, as cores possuem o seguinte significam: amarelo representa classes comuns, azul classes abstratas, verde classes filhas e cinza classes auxiliares. 
+No diagrama acima, as cores possuem o seguinte significado: amarelo representa classes comuns, azul classes abstratas, verde classes filhas e cinza classes auxiliares. 
