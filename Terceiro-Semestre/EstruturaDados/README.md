@@ -14,7 +14,7 @@
  - **Modularização**: organização do código por funções específicas, facilitando a manutenção e leitura.
  - **Iteração sequencial**: uso de listas lineares para a leitura de dados armazenadas em arquivos.
 
-## Tecnologias Utilizadas
+## Tecnologia Utilizada
 
  <div>
     <img align="center" src="https://skillicons.dev/icons?i=c" alt="icons"/>
