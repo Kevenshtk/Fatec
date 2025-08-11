@@ -36,3 +36,11 @@
     O sistema trata-se de uma aplicação que busca simula o funcionamento de uma agência bancária, utilizando conceitos fundamentais de POO e os princípios SOLID.
 
     [Link do repositório](https://github.com/Kevenshtk/Fatec/tree/main/Terceiro-Semestre/POO/Projeto_AgenciaBancaria)
+
+  - ### 4° Semestre
+    
+    **API Castração Avanhandava**
+    
+    O projeto trata-se de uma API (Interface de Programação de Aplicações) para um sistema de gestão das castrações de animais na cidade de Avanhandava em parceria com uma ONG local, utilizando conceitos de padrões de API REST e do framework Spring.
+    
+    [Link do repositório](https://github.com/Kevenshtk/Fatec/tree/main/Quarto-Semestre/Java)
