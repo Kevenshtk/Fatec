@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
- O projeto foi desenvolvido no 4º semestre do curso, durante a disciplina de Programação para Web, cursada no primeiro semestre do ano de 2025 e ministrada pelo professor Anderson Pazin.
+O projeto foi desenvolvido no 4º semestre do curso, durante uma atividade de extensão envolvendo as disciplinas de Programação para Web e Banco de Dados, cursada no primeiro semestre do ano de 2025 e ministrada pelos professores Anderson Pazin e Luiz Fernando de Oliveira Silva.
  
  O projeto trata-se de uma API (Interface de Programação de Aplicações) para um sistema de gestão das castrações de animais na cidade de Avanhandava em parceria com uma ONG local, utilizando conceitos de padrões de API REST e do framework Spring.
 
