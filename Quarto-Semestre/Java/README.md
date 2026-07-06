@@ -35,8 +35,8 @@ O projeto foi desenvolvido no 4º semestre do curso, durante uma atividade de ex
 ## Diagramas
 
 - ### Diagrama de Classes
-![Diagrama de Classes](https://kevenshtk.github.io/Fatec/Quarto-Semestre/Java/projectFiles/Class%20Diagram0.png)
+![Diagrama de Classes](https://kevenshtk.github.io/Projetos/img/fatec/ApiCastracao.png)
 
 - ### MER
-![MER](https://kevenshtk.github.io/Fatec/Quarto-Semestre/Java/projectFiles/MER.drawio.png)
+![MER](https://kevenshtk.github.io/Projetos/img/fatec/merApiCastracao.png)
 
