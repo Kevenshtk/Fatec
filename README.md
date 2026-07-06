@@ -47,3 +47,23 @@
   ![Imagem tela inicio](https://kevenshtk.github.io/Projetos/img/fatec/ApiCastracao.png)
 
   [Link do repositório](https://github.com/Kevenshtk/Fatec/tree/main/Quarto-Semestre/Java)
+
+- ### 5° Semestre
+
+  **Jogo das Pilhas**
+
+  O Jogo das Pilhas é uma aplicação web educativa desenvolvida para apoiar o ensino de lógica de programação para adolescentes. Ele foi pensado para tornar o aprendizado mais acessível, interativo e lúdico, reduzindo a dificuldade inicial comum nessa disciplina.
+
+  ![Imagem tela inicio](https://kevenshtk.github.io/jogo-das-pilhas/public/assets/img/telas/telaInicial.png)
+
+  [Link do repositório](https://github.com/Kevenshtk/jogo-das-pilhas)
+
+- ### 6° Semestre
+
+  **CRUD Produto MVC**
+
+  A aplicação consiste em um sistema web para gerenciamento de produtos, permitindo realizar as operações de cadastro, consulta, atualização e exclusão (CRUD), com foco em conceitos de Programação Orientada a Objetos (POO) utilizando PHP e seguindo o padrão de arquitetura MVC (Model-View-Controller).
+
+  ![Imagem tela inicio](https://kevenshtk.github.io/Projetos/img/fatec/telaCrudProduto.png)
+
+  [Link do repositório](https://github.com/Kevenshtk/Fatec/tree/main/Sexto-Semestre/CRUD-ProdutoMVC)
