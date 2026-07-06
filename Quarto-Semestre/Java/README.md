@@ -35,7 +35,7 @@ O projeto foi desenvolvido no 4º semestre do curso, durante uma atividade de ex
 ## Diagramas
 
 - ### Diagrama de Classes
-![Diagrama de Classes](https://kevenshtk.github.io/Projetos/img/fatec/ApiCastracao.png)
+![Diagrama de Classes](https://kevenshtk.github.io/Projetos/img/fatec/diagramApiCastracao.png)
 
 - ### MER
 ![MER](https://kevenshtk.github.io/Projetos/img/fatec/merApiCastracao.png)
